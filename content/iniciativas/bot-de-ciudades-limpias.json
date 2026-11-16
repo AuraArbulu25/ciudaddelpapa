@@ -1,0 +1,13 @@
+{
+  "titulo": "Bot de ciudades limpias",
+  "tema": "content/temas/limpieza-y-residuos.json",
+  "estado": "En desarrollo",
+  "resumen": "Reporta basura acumulada por WhatsApp con una foto y tu ubicación. Los reportes se ordenan en un informe semanal para la municipalidad provincial.",
+  "impulsa": "Somos Ciudadanía",
+  "lugar": "Provincia de Chiclayo",
+  "necesita": "Vecinos que quieran probarlo en su barrio.",
+  "ejemplo": false,
+  "publicada": true,
+  "contacto_correo": "",
+  "contacto_telefono": ""
+}
