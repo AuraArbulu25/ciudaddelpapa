@@ -1,9 +1,28 @@
 {
   "portada_titulo": "Chiclayo merece que se hable bien de ella. Hagámoslo posible.",
   "portada_texto": "Ciudad del Papa reúne las iniciativas de vecinos, colectivos, universidades y empresas para mejorar Chiclayo y la región Lambayeque. Cada iniciativa tiene un responsable, publica sus avances y puedes sumarte en un minuto.",
+  "razones": [
+    {
+      "titulo": "Los problemas tienen nombre y número",
+      "texto": "La basura, los drenes y la anemia infantil no son impresiones. Están medidos, y lo que se mide se puede mejorar y vigilar."
+    },
+    {
+      "titulo": "Las buenas ideas están dispersas",
+      "texto": "Muchas personas ya trabajan por la ciudad, pero cada una por su lado. Aquí se encuentran, se conocen y suman fuerzas."
+    },
+    {
+      "titulo": "Las autoridades necesitan propuestas concretas",
+      "texto": "Una iniciativa con responsable, objetivo y avances es más fácil de apoyar, financiar o convertir en política pública."
+    },
+    {
+      "titulo": "El mundo nos está mirando",
+      "texto": "Tras la visita del Papa León XIV, más gente conoce Chiclayo. Lo que vean al llegar depende de lo que hagamos ahora."
+    }
+  ],
+  "cifras_texto": "Datos oficiales sobre la ciudad y la región. No para lamentarnos: para saber por dónde empezar y medir si avanzamos.",
   "apoya_titulo": "Apoya una iniciativa",
   "apoya_texto": "Busca por tema o por distrito, revisa en qué estado está cada iniciativa y súmate directamente. Sus responsables te contactarán.",
-  "propon_titulo": "Propón una iniciativa",
+  "propon_titulo": "Presenta una iniciativa",
   "propon_texto": "Describe el problema y tu propuesta. Si cumple los criterios, se publica aquí para que otros la conozcan y la apoyen.",
   "para_quien": [
     {
@@ -29,7 +48,7 @@
   ],
   "pasos": [
     {
-      "titulo": "Propones",
+      "titulo": "Presentas",
       "texto": "Completas el formulario con el problema, tu propuesta y la persona responsable."
     },
     {
@@ -55,7 +74,7 @@
   "sobre_texto": "León XIV fue obispo de Chiclayo de 2015 a 2023 y volvió como Papa en noviembre de 2026. Con la visita, el mundo miró a nuestra ciudad. Hubo orgullo y también burlas por la basura, las pistas y los drenes.\n\nEsos problemas son reales. Esta plataforma nace para responder con trabajo: que cada buena idea tenga un lugar, un responsable y resultados que cualquiera pueda revisar.\n\nNos guían dos principios. El primero es la dignidad humana: una política es buena si mejora la vida diaria de las personas. El segundo es el progreso: cada iniciativa dice qué quiere lograr y cómo se medirá.",
   "preguntas": [
     {
-      "pregunta": "¿Quién puede proponer una iniciativa?",
+      "pregunta": "¿Quién puede presentar una iniciativa?",
       "respuesta": "Cualquier persona u organización, viva en Chiclayo o fuera, siempre que la iniciativa sea para la ciudad o la región."
     },
     {
@@ -80,24 +99,5 @@
     }
   ],
   "proponer_texto": "No hace falta tener todo resuelto. Basta una idea clara y alguien dispuesto a impulsarla.",
-  "aviso": "Proyecto ciudadano independiente. No está afiliado a la Santa Sede, a la Diócesis de Chiclayo ni a ninguna entidad pública o partido político.",
-  "razones": [
-    {
-      "titulo": "Los problemas tienen nombre y número",
-      "texto": "La basura, los drenes y la anemia infantil no son impresiones. Están medidos, y lo que se mide se puede mejorar y vigilar."
-    },
-    {
-      "titulo": "Las buenas ideas están dispersas",
-      "texto": "Muchas personas ya trabajan por la ciudad, pero cada una por su lado. Aquí se encuentran, se conocen y suman fuerzas."
-    },
-    {
-      "titulo": "Las autoridades necesitan propuestas concretas",
-      "texto": "Una iniciativa con responsable, objetivo y avances es más fácil de apoyar, financiar o convertir en política pública."
-    },
-    {
-      "titulo": "El mundo nos está mirando",
-      "texto": "Tras la visita del Papa León XIV, más gente conoce Chiclayo. Lo que vean al llegar depende de lo que hagamos ahora."
-    }
-  ],
-  "cifras_texto": "Datos oficiales sobre la ciudad y la región. No para lamentarnos: para saber por dónde empezar y medir si avanzamos."
+  "aviso": "Proyecto ciudadano independiente. No está afiliado a la Santa Sede, a la Diócesis de Chiclayo ni a ninguna entidad pública o partido político."
 }
