@@ -1,3 +1,7 @@
+media:
+  input: src/uploads
+  output: /uploads
+
 content:
   - name: iniciativas
     label: Iniciativas
@@ -49,6 +53,90 @@ content:
       - name: necesita
         label: Qué necesita
         type: text
+      - name: enlaces
+        label: Enlaces (botones)
+        description: Por ejemplo el WhatsApp del bot, un mapa, una web o redes sociales. El primero se muestra como botón principal.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{tipo} · {texto}'
+        fields:
+          - name: tipo
+            label: Tipo
+            type: select
+            options:
+              values: [whatsapp, mapa, web, redes, documento, formulario, otro]
+          - name: url
+            label: Dirección (https://…) o, para WhatsApp, solo el número
+            type: string
+          - name: texto
+            label: Texto del botón (opcional)
+            description: Si lo dejas vacío se usa uno según el tipo, por ejemplo «Escribir por WhatsApp».
+            type: string
+      - name: meta
+        label: Meta y avance
+        description: Opcional. Se muestra como una barra de progreso.
+        type: object
+        fields:
+          - name: descripcion
+            label: Qué se mide (por ejemplo «árboles plantados»)
+            type: string
+          - name: objetivo
+            label: Objetivo
+            type: number
+          - name: actual
+            label: Logrado hasta hoy
+            type: number
+      - name: avances
+        label: Avances
+        description: Notas cortas con fecha. Aparecen de la más reciente a la más antigua.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fecha} · {texto}'
+        fields:
+          - name: fecha
+            label: Fecha
+            type: date
+          - name: texto
+            label: Qué se logró
+            type: text
+      - name: proxima
+        label: Próxima actividad
+        type: object
+        fields:
+          - name: fecha
+            label: Fecha
+            type: date
+          - name: hora
+            label: Hora (por ejemplo «9:00 a. m.»)
+            type: string
+          - name: lugar
+            label: Lugar
+            type: string
+          - name: detalle
+            label: Detalle
+            type: text
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{pie}'
+        fields:
+          - name: imagen
+            label: Foto
+            type: image
+          - name: pie
+            label: Pie de foto
+            type: string
+      - name: mapa_url
+        label: Mapa para mostrar en la página (enlace para insertar)
+        description: Opcional. El enlace «para insertar» (embed) de uMap o Google My Maps; debe empezar por https://.
+        type: string
       - name: contacto_correo
         label: Correo del responsable (privado)
         description: No se muestra en el sitio. Aquí llegan las solicitudes de quienes se suman. Si está vacío, llegan al correo del equipo.
@@ -88,6 +176,10 @@ content:
     path: content/sitio.json
     format: json
     fields:
+      - name: url_sitio
+        label: Dirección del sitio
+        description: Se usa en los enlaces para compartir. Normalmente https://ciudaddelpapa.com
+        type: string
       - name: portada_titulo
         label: Portada · título
         type: string
@@ -122,7 +214,7 @@ content:
         label: Recuadro «Presenta» · título
         type: string
       - name: propon_texto
-        label: Recuadro «Propón» · texto
+        label: Recuadro «Presenta» · texto
         type: text
       - name: para_quien
         label: Para quién es
@@ -174,7 +266,7 @@ content:
           - name: respuesta
             label: Respuesta
             type: text
-      - name: presentar_texto
+      - name: proponer_texto
         label: Sección «Presentar» · texto
         type: text
       - name: aviso
