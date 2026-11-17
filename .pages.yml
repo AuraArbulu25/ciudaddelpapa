@@ -119,7 +119,7 @@ content:
         label: Recuadro «Apoya» · texto
         type: text
       - name: propon_titulo
-        label: Recuadro «Propón» · título
+        label: Recuadro «Presenta» · título
         type: string
       - name: propon_texto
         label: Recuadro «Propón» · texto
@@ -174,8 +174,8 @@ content:
           - name: respuesta
             label: Respuesta
             type: text
-      - name: proponer_texto
-        label: Sección «Proponer» · texto
+      - name: presentar_texto
+        label: Sección «Presentar» · texto
         type: text
       - name: aviso
         label: Aviso del pie de página
