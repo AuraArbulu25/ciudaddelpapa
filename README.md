@@ -13,7 +13,7 @@ Everything below `content/` is edited in Pages CMS:
 
 The rest:
 
-- `src/` — the page template (`index.html`) and the flag (`bandera-chiclayo.svg`).
+- `src/` — the home page template (`index.html`), the initiative page template (`iniciativa.html`), shared styles (`estilos.css`) and script (`app.js`), the flag, and `uploads/` where photos added in the CMS are stored.
 - `build.js` — on every deploy, fills the template with the content above and builds `public/`. Only public fields reach the page: the responsible's email and phone are never published. If something is missing or a tema doesn't exist, the build log in Vercel shows an "Aviso" line.
 - `api/sumarme.js` — when someone joins an initiative, emails the initiative's responsible, copies the team, and sends a confirmation to the person.
 - `api/proponer.js` — emails new proposals to the team.
@@ -30,6 +30,16 @@ The rest:
    - `ADMIN_EMAIL`: the team inbox. It receives every proposal and a copy of every join request.
 5. In Vercel, add the domain `ciudaddelpapa.com` to the project.
 6. In Pages CMS (app.pagescms.org), sign in with GitHub and open the repository.
+
+## Initiative pages
+
+Each published initiative gets its own page at `/iniciativas/<file-name>/`, shareable on WhatsApp. In the CMS each initiative can have:
+- **Enlaces:** buttons such as WhatsApp (just type the number; Peruvian 9-digit numbers get +51 automatically), a map, a website, social media, a document or a form. Only `https://` links are accepted.
+- **Meta y avance:** a goal with a progress bar ("Meta: 500 árboles plantados · Llevamos 120").
+- **Avances:** dated notes, newest first.
+- **Próxima actividad:** date, time, place and details.
+- **Fotos:** uploaded through the CMS into `src/uploads/`.
+- **Mapa:** the embed link of a uMap or Google My Maps map, shown inside the page.
 
 ## Day to day
 

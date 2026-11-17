@@ -9,5 +9,15 @@
   "ejemplo": false,
   "publicada": true,
   "contacto_correo": "",
-  "contacto_telefono": ""
+  "contacto_telefono": "",
+  "enlaces": [
+    {
+      "tipo": "whatsapp",
+      "url": "",
+      "texto": "Reportar basura por WhatsApp"
+    }
+  ],
+  "avances": [],
+  "fotos": [],
+  "mapa_url": ""
 }
