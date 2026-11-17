@@ -2,6 +2,7 @@
 //   content/sitio.json        textos de la página
 //   content/temas/*.json      lista de temas
 //   content/iniciativas/*.json una iniciativa por archivo
+//   content/datos.json        cifras y gráficos sobre Chiclayo
 // Solo pasan a la web los campos públicos: los contactos de los responsables nunca se publican.
 const fs = require('fs');
 const path = require('path');
@@ -76,6 +77,8 @@ const iniciativas = readCollection('content/iniciativas')
 const sitio = readJson('content/sitio.json');
 
 const blocks = {
+  razones: () => list(sitio.razones, 'razones')
+    .map((x) => `<li><h3>${esc(x.titulo)}</h3><p>${esc(x.texto)}</p></li>`).join('\n      '),
   para_quien: () => list(sitio.para_quien, 'para_quien')
     .map((x) => `<li><h3>${esc(x.titulo)}</h3><p>${esc(x.texto)}</p></li>`).join('\n      '),
   pasos: () => list(sitio.pasos, 'pasos')
@@ -88,6 +91,28 @@ const blocks = {
   sobre_texto: () => String(sitio.sobre_texto || '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean)
     .map((p) => `<p>${esc(p).replace(/\n/g, '<br>')}</p>`).join('\n      '),
 };
+
+// --- Cifras y gráficos ---------------------------------------------------
+const datosRaw = readJson('content/datos.json');
+const datos = {
+  cifras: (Array.isArray(datosRaw.cifras) ? datosRaw.cifras : []).map((c) => ({
+    valor: String(c.valor || ''), etiqueta: String(c.etiqueta || ''),
+    fuente: String(c.fuente || ''), fuente_url: /^https?:\/\//.test(c.fuente_url || '') ? c.fuente_url : '',
+  })),
+  graficos: (Array.isArray(datosRaw.graficos) ? datosRaw.graficos : []).map((g, i) => {
+    const items = (Array.isArray(g.items) ? g.items : [])
+      .map((it) => ({ etiqueta: String(it.etiqueta || ''), valor: Number(it.valor) }))
+      .filter((it) => Number.isFinite(it.valor));
+    if (!items.length) warnings.push(`content/datos.json: el gráfico ${i + 1} no tiene valores numéricos.`);
+    if (!g.fuente) warnings.push(`content/datos.json: el gráfico "${g.titulo || i + 1}" no indica su fuente.`);
+    return {
+      titulo: String(g.titulo || ''), texto: String(g.texto || ''),
+      tipo: g.tipo === 'partes' ? 'partes' : 'barras', unidad: String(g.unidad || ''),
+      items, fuente: String(g.fuente || ''), fuente_url: /^https?:\/\//.test(g.fuente_url || '') ? g.fuente_url : '',
+    };
+  }),
+};
+datos.cifras.forEach((c, i) => { if (!c.fuente) warnings.push(`content/datos.json: la cifra ${i + 1} no indica su fuente.`); });
 
 // --- Armado --------------------------------------------------------------
 fs.rmSync(OUT, { recursive: true, force: true });
@@ -107,7 +132,7 @@ html = html.replace(/\{\{(\w+)\}\}/g, (m, key) => {
 
 // "<" se escapa para que ningún texto pueda cerrar la etiqueta <script>.
 const asJson = (v) => JSON.stringify(v).replace(/</g, '\\u003c');
-for (const [marker, value] of [['__INICIATIVAS__', iniciativas], ['__TEMAS__', temas]]) {
+for (const [marker, value] of [['__INICIATIVAS__', iniciativas], ['__TEMAS__', temas], ['__DATOS__', datos]]) {
   if (!html.includes(marker)) throw new Error(`src/index.html no contiene el marcador ${marker}`);
   html = html.replace(marker, () => asJson(value));
 }

@@ -1,6 +1,6 @@
 {
-  "portada_titulo": "Apoya o propón una iniciativa ciudadana para Chiclayo",
-  "portada_texto": "Ciudad del Papa reúne en un solo lugar las iniciativas de vecinos, colectivos, universidades y empresas para mejorar Chiclayo y la región Lambayeque. Cada iniciativa tiene un responsable y publica sus avances.",
+  "portada_titulo": "Chiclayo merece que se hable bien de ella. Hagámoslo posible.",
+  "portada_texto": "Ciudad del Papa reúne las iniciativas de vecinos, colectivos, universidades y empresas para mejorar Chiclayo y la región Lambayeque. Cada iniciativa tiene un responsable, publica sus avances y puedes sumarte en un minuto.",
   "apoya_titulo": "Apoya una iniciativa",
   "apoya_texto": "Busca por tema o por distrito, revisa en qué estado está cada iniciativa y súmate directamente. Sus responsables te contactarán.",
   "propon_titulo": "Propón una iniciativa",
@@ -80,5 +80,24 @@
     }
   ],
   "proponer_texto": "No hace falta tener todo resuelto. Basta una idea clara y alguien dispuesto a impulsarla.",
-  "aviso": "Proyecto ciudadano independiente. No está afiliado a la Santa Sede, a la Diócesis de Chiclayo ni a ninguna entidad pública o partido político."
+  "aviso": "Proyecto ciudadano independiente. No está afiliado a la Santa Sede, a la Diócesis de Chiclayo ni a ninguna entidad pública o partido político.",
+  "razones": [
+    {
+      "titulo": "Los problemas tienen nombre y número",
+      "texto": "La basura, los drenes y la anemia infantil no son impresiones. Están medidos, y lo que se mide se puede mejorar y vigilar."
+    },
+    {
+      "titulo": "Las buenas ideas están dispersas",
+      "texto": "Muchas personas ya trabajan por la ciudad, pero cada una por su lado. Aquí se encuentran, se conocen y suman fuerzas."
+    },
+    {
+      "titulo": "Las autoridades necesitan propuestas concretas",
+      "texto": "Una iniciativa con responsable, objetivo y avances es más fácil de apoyar, financiar o convertir en política pública."
+    },
+    {
+      "titulo": "El mundo nos está mirando",
+      "texto": "Tras la visita del Papa León XIV, más gente conoce Chiclayo. Lo que vean al llegar depende de lo que hagamos ahora."
+    }
+  ],
+  "cifras_texto": "Datos oficiales sobre la ciudad y la región. No para lamentarnos: para saber por dónde empezar y medir si avanzamos."
 }
