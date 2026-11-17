@@ -1,0 +1,256 @@
+content:
+  - name: iniciativas
+    label: Iniciativas
+    type: collection
+    path: content/iniciativas
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: titulo
+      fields: [titulo, estado]
+    fields:
+      - name: titulo
+        label: Nombre de la iniciativa
+        type: string
+        required: true
+      - name: publicada
+        label: Publicada en el sitio
+        type: boolean
+        default: true
+      - name: ejemplo
+        label: Es un ejemplo (no recibe solicitudes)
+        type: boolean
+        default: false
+      - name: tema
+        label: Tema
+        description: Elige uno de la lista de Temas.
+        type: reference
+        required: true
+        options:
+          collection: temas
+          label: '{primary}'
+      - name: estado
+        label: Estado
+        type: select
+        required: true
+        options:
+          values: [Idea, En desarrollo, En marcha]
+      - name: resumen
+        label: Resumen (dos o tres frases)
+        type: text
+        required: true
+      - name: impulsa
+        label: Quién la impulsa (nombre público)
+        type: string
+        required: true
+      - name: lugar
+        label: Dónde
+        type: string
+      - name: necesita
+        label: Qué necesita
+        type: text
+      - name: contacto_correo
+        label: Correo del responsable (privado)
+        description: No se muestra en el sitio. Aquí llegan las solicitudes de quienes se suman. Si está vacío, llegan al correo del equipo.
+        type: string
+      - name: contacto_telefono
+        label: Teléfono del responsable (privado)
+        description: No se muestra en el sitio. Solo para uso interno del equipo.
+        type: string
+
+  - name: temas
+    label: Temas
+    type: collection
+    path: content/temas
+    format: json
+    filename: '{primary}.json'
+    view:
+      primary: nombre
+      fields: [nombre, orden]
+      sort: orden
+    fields:
+      - name: nombre
+        label: Nombre del tema
+        description: Es el texto que se ve en el sitio. Puedes cambiarlo; las iniciativas de este tema se actualizan solas.
+        type: string
+        required: true
+      - name: descripcion
+        label: Qué incluye
+        description: Ayuda interna para elegir el tema correcto. No se muestra en el sitio.
+        type: text
+      - name: orden
+        label: Orden en la lista
+        type: number
+
+  - name: sitio
+    label: Textos de la página
+    type: file
+    path: content/sitio.json
+    format: json
+    fields:
+      - name: portada_titulo
+        label: Portada · título
+        type: string
+        required: true
+      - name: portada_texto
+        label: Portada · texto
+        type: text
+      - name: razones
+        label: Por qué existe esta plataforma
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{titulo}'
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: texto
+            label: Texto
+            type: text
+      - name: cifras_texto
+        label: Chiclayo en cifras · texto de introducción
+        type: text
+      - name: apoya_titulo
+        label: Recuadro «Apoya» · título
+        type: string
+      - name: apoya_texto
+        label: Recuadro «Apoya» · texto
+        type: text
+      - name: propon_titulo
+        label: Recuadro «Propón» · título
+        type: string
+      - name: propon_texto
+        label: Recuadro «Propón» · texto
+        type: text
+      - name: para_quien
+        label: Para quién es
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{titulo}'
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: texto
+            label: Texto
+            type: text
+      - name: pasos
+        label: Cómo funciona · pasos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{index}. {titulo}'
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+          - name: texto
+            label: Texto
+            type: text
+      - name: criterios
+        label: Criterios de publicación
+        type: string
+        list: true
+      - name: sobre_texto
+        label: Sobre el proyecto
+        description: Deja una línea en blanco entre párrafos.
+        type: text
+      - name: preguntas
+        label: Preguntas frecuentes
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{pregunta}'
+        fields:
+          - name: pregunta
+            label: Pregunta
+            type: string
+          - name: respuesta
+            label: Respuesta
+            type: text
+      - name: proponer_texto
+        label: Sección «Proponer» · texto
+        type: text
+      - name: aviso
+        label: Aviso del pie de página
+        type: text
+
+  - name: datos
+    label: Cifras y gráficos
+    type: file
+    path: content/datos.json
+    format: json
+    fields:
+      - name: cifras
+        label: Cifras destacadas
+        description: Las tres primeras aparecen en la portada; el resto, debajo de los gráficos. Toda cifra necesita su fuente.
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{valor} · {etiqueta}'
+        fields:
+          - name: valor
+            label: Cifra (tal como se lee, por ejemplo «30,7 %» o «1,4 millones»)
+            type: string
+            required: true
+          - name: etiqueta
+            label: Qué mide
+            type: text
+            required: true
+          - name: fuente
+            label: Fuente
+            type: string
+            required: true
+          - name: fuente_url
+            label: Enlace a la fuente
+            type: string
+      - name: graficos
+        label: Gráficos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{titulo}'
+        fields:
+          - name: titulo
+            label: Título
+            type: string
+            required: true
+          - name: texto
+            label: Texto explicativo
+            type: text
+          - name: tipo
+            label: Tipo de gráfico
+            description: «barras» compara valores; «partes» muestra cómo se reparte un total (por ejemplo, porcentajes que suman 100).
+            type: select
+            options:
+              values: [barras, partes]
+          - name: unidad
+            label: Unidad
+            description: Escribe % para porcentajes, o la palabra que acompaña al número (por ejemplo «personas»).
+            type: string
+          - name: items
+            label: Datos
+            type: object
+            list: true
+            fields:
+              - name: etiqueta
+                label: Nombre
+                type: string
+              - name: valor
+                label: Valor (número, con punto para decimales)
+                type: number
+          - name: fuente
+            label: Fuente
+            type: string
+            required: true
+          - name: fuente_url
+            label: Enlace a la fuente
+            type: string
