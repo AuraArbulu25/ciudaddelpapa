@@ -1,13 +1,19 @@
 {
-  "titulo": "Rutas seguras al colegio",
-  "tema": "content/temas/movilidad-y-pistas.json",
-  "estado": "Idea",
-  "resumen": "Padres, colegios y serenazgo acuerdan caminos señalizados y acompañados para que los escolares lleguen a pie sin riesgo.",
-  "impulsa": "Por definir",
-  "lugar": "Distritos urbanos",
-  "necesita": "Colegios y asociaciones de padres interesados.",
-  "ejemplo": true,
+  "titulo": "Agua sin arsénico para Lambayeque",
   "publicada": true,
-  "contacto_correo": "",
-  "contacto_telefono": ""
+  "ejemplo": false,
+  "tema": "content/temas/agua-desague-y-lluvias.json",
+  "estado": "En desarrollo",
+  "resumen": "En varios distritos de Lambayeque, entre ellos Mórrope, muchas familias reciben agua con arsénico por encima de los niveles permitidos. Tomar agua contaminada con arsénico por mucho tiempo puede causar enfermedades graves. Los más expuestos son las niñas, los niños y las gestantes.\n\nEsto lleva años y todavía no sabemos con claridad qué ha hecho el Estado, cuánto dinero se ha destinado ni en qué estado están las obras.",
+  "impulsa": "Lucero S",
+  "lugar": "Distritos de Lambayeque",
+  "avances": [
+    {
+      "fecha": "2026-11-25",
+      "texto": "Por ahora se ha solicitado:\nQue informen qué acciones han tomado frente al agua con arsénico en la región.\n\nQue pidan información oficial a las entidades responsables:\nContraloría General de la República: auditorías y responsabilidades en proyectos de agua.\nMinisterio de Economía y Finanzas: cuánto presupuesto se asignó y cuánto se gastó.\nGobierno Regional de Lambayeque: proyectos de agua y vigilancia de la calidad.\nMinisterio de Salud (DIGESA): resultados de los análisis del agua.\nAutoridad Nacional del Agua (ANA): calidad de las fuentes de agua.\nEPSEL: calidad del agua que distribuye y sistemas de tratamiento.\nSUNASS: supervisión y sanciones a los prestadores del servicio.\nMinisterio de Vivienda: obras de agua y saneamiento en la zona.\n\nCon esa información queremos saber qué se prometió, qué se hizo y qué falta, y exigir soluciones concretas."
+    }
+  ],
+  "proxima": {
+    "fecha": "2026-11-25"
+  }
 }
