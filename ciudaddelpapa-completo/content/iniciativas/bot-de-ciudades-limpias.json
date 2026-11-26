@@ -1,0 +1,26 @@
+{
+  "titulo": "Huerequeue - Bot de ciudades limpias",
+  "publicada": true,
+  "ejemplo": false,
+  "tema": "content/temas/limpieza-y-residuos.json",
+  "estado": "En desarrollo",
+  "resumen": "Reporta basura acumulada por WhatsApp con una foto y tu ubicación. Los reportes se ordenan en un informe semanal para la municipalidad provincial.",
+  "impulsa": "Somos Ciudadanía",
+  "lugar": "Provincia de Chiclayo",
+  "necesita": "Vecinos que quieran probarlo en su barrio.",
+  "enlaces": [
+    {
+      "tipo": "whatsapp",
+      "url": "+51939768470",
+      "texto": "Reportar basura por WhatsApp"
+    },
+    {
+      "tipo": "mapa",
+      "url": "https://script.google.com/macros/s/AKfycby62MrSSFlFxGhYIHqKKdBhhWK7_kHMezNdYxn3p4K2YIRx6VMlwTy_iM4LqSPmvlpT/exec",
+      "texto": "Mapa de Basura"
+    }
+  ],
+  "proxima": {
+    "fecha": "2026-11-17"
+  }
+}

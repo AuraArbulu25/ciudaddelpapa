@@ -1,0 +1,68 @@
+{
+  "cifras": [
+    {
+      "valor": "1,4 millones",
+      "etiqueta": "personas viven en la región Lambayeque",
+      "fuente": "INEI, Censos Nacionales 2025",
+      "fuente_url": "https://www.gob.pe/institucion/inei/noticias/1422166-inei-presenta-resultados-censales-de-lambayeque-para-la-gestion-de-riesgos-y-la-seguridad-ciudadana"
+    },
+    {
+      "valor": "59",
+      "etiqueta": "puntos de acumulación de basura en el distrito de Chiclayo: 31 críticos y 28 potenciales",
+      "fuente": "Municipalidad Provincial de Chiclayo, Plan de Erradicación de Puntos Críticos 2026 (verificación OEFA, noviembre 2025)",
+      "fuente_url": "https://cdn.www.gob.pe/uploads/document/file/9487407/7767295-erradicacion-de-puntos-criticos-2026.pdf"
+    },
+    {
+      "valor": "30,7 %",
+      "etiqueta": "de niñas y niños de 6 a 35 meses tiene anemia en Lambayeque",
+      "fuente": "INEI, ENDES 2025 (vía El Peruano)",
+      "fuente_url": "https://elperuano.pe/noticia/296071-inei-recoge-informacion-sobre-anemia-desnutricion-y-salud-materna-en-chiclayo"
+    },
+    {
+      "valor": "14,3 %",
+      "etiqueta": "de menores de cinco años tiene desnutrición crónica en Lambayeque",
+      "fuente": "INEI, ENDES 2025 (vía El Peruano)",
+      "fuente_url": "https://elperuano.pe/noticia/296071-inei-recoge-informacion-sobre-anemia-desnutricion-y-salud-materna-en-chiclayo"
+    }
+  ],
+  "graficos": [
+    {
+      "titulo": "¿Qué hay en la basura de Chiclayo?",
+      "texto": "El distrito de Chiclayo genera unas 254 toneladas de residuos al día. Casi 8 de cada 10 kilos se podrían compostar o reciclar en lugar de terminar en la calle o en un botadero.",
+      "tipo": "partes",
+      "unidad": "%",
+      "items": [
+        { "etiqueta": "Orgánicos aprovechables", "valor": 41.1 },
+        { "etiqueta": "Inorgánicos aprovechables", "valor": 38.3 },
+        { "etiqueta": "No aprovechables", "valor": 20.6 }
+      ],
+      "fuente": "Municipalidad Provincial de Chiclayo, Estudio de Caracterización de Residuos Sólidos 2022, citado en el Plan de Erradicación de Puntos Críticos 2026",
+      "fuente_url": "https://cdn.www.gob.pe/uploads/document/file/9487407/7767295-erradicacion-de-puntos-criticos-2026.pdf"
+    },
+    {
+      "titulo": "Pobreza monetaria, 2025",
+      "texto": "Lambayeque tiene bastante menos pobreza que el promedio del país. Es una base sólida para construir, no una razón para conformarse.",
+      "tipo": "barras",
+      "unidad": "%",
+      "items": [
+        { "etiqueta": "Lambayeque", "valor": 14.5 },
+        { "etiqueta": "Perú", "valor": 25.7 }
+      ],
+      "fuente": "Mesa de Concertación para la Lucha contra la Pobreza, Lambayeque, sobre la base de INEI-ENAHO",
+      "fuente_url": "https://intranet.mesadeconcertacion.org.pe/storage/documentos/2026-08-25/mclcp-pobreza-2004-2025-julio-2026-lambayeque.pdf"
+    },
+    {
+      "titulo": "Los distritos más poblados, 2025",
+      "texto": "Más de medio millón de personas viven en solo tres distritos de la provincia de Chiclayo. Lo que se mejora aquí llega a mucha gente.",
+      "tipo": "barras",
+      "unidad": "personas",
+      "items": [
+        { "etiqueta": "Chiclayo", "valor": 267000 },
+        { "etiqueta": "José Leonardo Ortiz", "valor": 169000 },
+        { "etiqueta": "La Victoria", "valor": 103000 }
+      ],
+      "fuente": "INEI, Censos Nacionales 2025",
+      "fuente_url": "https://www.gob.pe/institucion/inei/noticias/1422166-inei-presenta-resultados-censales-de-lambayeque-para-la-gestion-de-riesgos-y-la-seguridad-ciudadana"
+    }
+  ]
+}
