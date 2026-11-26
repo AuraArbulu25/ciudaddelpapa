@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" role="img" aria-label="Bandera de Chiclayo">
-  <!-- Campo celeste claro, proporción 2:3. El escudo del centro es una silueta provisional:
-       reemplaza este archivo por el arte oficial de la bandera cuando lo tengas. -->
-  <rect width="300" height="200" fill="#8ccbee"/>
-  <path d="M118 52h64v52c0 26-14 40-32 48-18-8-32-22-32-48z" fill="#ffffff" stroke="#1c2126" stroke-width="3"/>
-</svg>
