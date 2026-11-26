@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titulo}} · Ciudad del Papa</title>
+<meta name="description" content="{{resumen}}">
+<link rel="canonical" href="{{url}}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ciudad del Papa">
+<meta property="og:title" content="{{titulo}}">
+<meta property="og:description" content="{{resumen}}">
+<meta property="og:url" content="{{url}}">
+{{{og_imagen}}}
+<link rel="icon" href="../../bandera-chiclayo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Schibsted+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../estilos.css">
+</head>
+<body data-root="../../">
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="../../"><img src="../../bandera-chiclayo.svg" alt="Bandera de Chiclayo" width="48" height="32"><span><b>Ciudad del Papa</b><small>Iniciativas ciudadanas para Chiclayo</small></span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../../#buscar">Iniciativas</a>
+      <a href="../../#como-funciona">Cómo funciona</a>
+      <a class="btn small" href="../../#presentar">Presentar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="ini-hero">
+  <div class="wrap">
+    <p class="crumbs"><a href="../../#buscar">Iniciativas</a> / {{tema}}</p>
+    <div class="tags">{{{etiquetas}}}</div>
+    <h1>{{titulo}}</h1>
+    <p class="lead">{{resumen}}</p>
+    {{{meta}}}
+    {{{enlaces}}}
+  </div>
+</section>
+
+<section>
+  <div class="wrap ini-grid">
+    <div class="ini-main">
+      {{{mapa}}}
+      {{{fotos}}}
+      <div>
+        <h2>Avances</h2>
+        {{{avances}}}
+      </div>
+      <div class="ini-join" id="sumarme">
+        <h2>Sumarme a esta iniciativa</h2>
+        {{{sumarse}}}
+      </div>
+    </div>
+    <aside class="ini-side">
+      {{{proxima}}}
+      <div class="card">
+        <h2>Datos de la iniciativa</h2>
+        <dl class="facts">
+          <div><dt>Impulsa:</dt><dd>{{impulsa}}</dd></div>
+          <div><dt>Dónde:</dt><dd>{{lugar}}</dd></div>
+          <div><dt>Estado:</dt><dd>{{estado}}</dd></div>
+          <div><dt>Tema:</dt><dd>{{tema}}</dd></div>
+        </dl>
+      </div>
+      {{{necesita}}}
+      <div class="card">
+        <h2>Comparte esta iniciativa</h2>
+        <p class="empty">Envíala a quien pueda sumarse.</p>
+        <div class="links"><a class="btn small" href="{{compartir_whatsapp}}" target="_blank" rel="noopener">Compartir por WhatsApp</a></div>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <div><h3>Ciudad del Papa</h3><p>Plataforma de iniciativas ciudadanas para Chiclayo y la región Lambayeque.</p></div>
+  <div><h3>Plataforma</h3><ul><li><a href="../../#buscar">Todas las iniciativas</a></li><li><a href="../../#presentar">Presentar una iniciativa</a></li></ul></div>
+  <div><h3>Aviso</h3><p>{{aviso}}</p></div>
+</div></footer>
+
+<script type="application/json" id="ini">__INI__</script>
+<script src="../../app.js"></script>
+</body>
+</html>
