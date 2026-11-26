@@ -1,8 +1,0 @@
-{
-  "name": "ciudaddelpapa",
-  "private": true,
-  "description": "Plataforma de iniciativas ciudadanas para Chiclayo",
-  "scripts": {
-    "build": "node build.js"
-  }
-}
